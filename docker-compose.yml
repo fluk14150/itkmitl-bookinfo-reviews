@@ -1,0 +1,12 @@
+services:
+  reviews:
+    build: .
+    image: ghcr.io/fluk14150/bookinfo-reviews:dev
+    ports:
+      - "8082:9080"
+    environment:
+      ENABLE_RATINGS: "true"
+      ratings_service: http://ratings:8080
+    
+
+
